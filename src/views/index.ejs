@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    <p><%= title %></p>
+    <ul>
+      <% links.forEach(link => { %>
+       <li><a href="<%= link.url %>"><%= link.content %></a></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>WebRTC PeerConnection</title>
+    <link href="./css/main.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  </head>
+  <body>
+    <div>
+      <button id="connserver">Conn SigSer</button>
+      <button id="leave" disabled>Leave</button>
+    </div>
+    <div id="preview">
+      <div>
+        <h2>Local:</h2>
+        <video autoplay playsinline id="localvideo"></video>
+      </div>
+      <div>
+        <h2>Remote:</h2>
+        <video autoplay playsinline id="remotevideo"></video>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+</html>

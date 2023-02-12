@@ -1,0 +1,26 @@
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+main > div {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#local-video, #remote-video {
+  width: 30rem;
+  height: 15rem;
+  border: 1px solid #f00;
+}
+
+#local-sdp, #remote-sdp {
+  border: 1px solid #fff;
+  margin-top: 5rem;
+  width: 30rem;
+  height: 15rem;
+  overflow: auto;
+}

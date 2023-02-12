@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Live Room</title>
+    <link rel="stylesheet" href="/css/live-room.css" />
+    <!-- <script
+      src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+      integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+      crossorigin="anonymous"
+      defer></script> -->
+    <script src="/js/socket.io.min.js" defer></script>
+    <!-- <script
+      src="https://webrtc.github.io/adapter/adapter-latest.js"
+      defer></script> -->
+    <script src="/js/adapter-latest.js" defer></script>
+    <script src="/js/text-chat.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <button id="call">call</button>
+      <button id="hangup" disabled>hangup</button>
+    </div>
+    <div id="preview">
+      <div>
+        <h2>Local:</h2>
+        <video autoplay id="local-video"></video>
+      </div>
+      <div>
+        <h2>Remote:</h2>
+        <video autoplay id="remote-video"></video>
+      </div>
+    </div>
+    <div>
+      <h2>Chat:</h2>
+      <textarea id="chat" disabled></textarea>
+      <textarea id="sendtext" disabled></textarea>
+      <button id="send" disabled>Send</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Live Room</title>
+    <link rel="stylesheet" href="/css/live-room.css" />
+    <!-- <script
+      src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+      integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+      crossorigin="anonymous"
+      defer></script> -->
+    <script src="/js/socket.io.min.js" defer></script>
+    <!-- <script
+      src="https://webrtc.github.io/adapter/adapter-latest.js"
+      defer></script> -->
+    <script src="/js/adapter-latest.js" defer></script>
+    <script src="/js/graph.js" defer></script>
+    <script src="/js/transport-control-and-stat.js" defer></script>
+    <style>
+      .graph-container {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="call">call</button>
+      <button id="hangup" disabled>hangup</button>
+    </div>
+    <div>
+      <label for="bandwidth">Bandwidth:</label>
+      <select name="bandwidth" id="bandwidth" disabled>
+        <option value="unlimited">unlimited</option>
+        <option value="2000">2000</option>
+        <option value="1000">1000</option>
+        <option value="500">500</option>
+        <option value="250">250</option>
+        <option value="125">125</option>
+      </select>
+      <span>kbps</span>
+    </div>
+    <div id="preview">
+      <div>
+        <h2>Local:</h2>
+        <video autoplay id="local-video"></video>
+      </div>
+      <div>
+        <h2>Remote:</h2>
+        <video autoplay id="remote-video"></video>
+      </div>
+    </div>
+    <div class="graph-container" id="bitrate-graph">
+      <div>Bitrate</div>
+      <canvas id="bitrate-canvas"></canvas>
+    </div>
+    <div class="graph-container" id="packet-graph">
+      <div>Packets sent per second</div>
+      <canvas id="packet-canvas"></canvas>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/peer-connection.css" />
+    <title><%= title %></title>
+    <script
+      src="https://webrtc.github.io/adapter/adapter-latest.js"
+      defer></script>
+    <script src="/js/peer-connection.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="local">
+        <video autoplay id="local-video"></video>
+        <div class="control">
+          <button id="play-btn">play</button>
+          <button id="call-btn">call</button>
+          <button id="hangup-btn">hangup</button>
+        </div>
+        <div id="local-sdp">local SDP</div>
+      </div>
+      <div class="remote">
+        <video autoplay id="remote-video"></video>
+        <div style="visibility: hidden"><button></button></div>
+        <div id="remote-sdp">remote SDP</div>
+      </div>
+    </main>
+  </body>
+</html>
